@@ -11,6 +11,8 @@
 # while parada != 'sim':
 #     parada = input('Deseja parar sim ou não? ')
 
+
+
 # sair = 'não'
 # while sair != 'sim':
 #     print('0 - cadastrar')
@@ -34,10 +36,14 @@
 #         print('Opção inválida')
 #         sair = input('Deseja sair sim ou não? ')
 
+
+
 # FOR (SÓ EXECUTA ATÉ UMA QUANTIDADE DETERMINADA)
 
 # for numero in range(1,11):
 #     print(numero)
+
+
 
 # percorrendo listas
 
@@ -45,6 +51,8 @@
 
 # for fruta in frutas:
 #     print(fruta)
+
+
 
 # nome = 'Luciano'
 
