@@ -1,0 +1,57 @@
+def menu():
+    nomes = []
+
+    while True:
+        print("MENU")
+        print("1 - Cadastrar nome")
+        print("2 - Atualizar nome")
+        print("3 - Excluir nome")
+        print("4 - Listar todos os cadastrados")
+        print("0 - Sair")
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            nome = input("Digite o nome para cadastrar: ")
+            nomes.append(nome)
+            print(f"Nome '{nome}' cadastrado com sucesso!")
+
+        elif opcao == "2":
+            antigo = input("Digite o nome que deseja atualizar: ")
+            if antigo in nomes:
+                novo = input("Digite o novo nome: ")
+                indice = nomes.index(antigo)
+                nomes[indice] = novo
+                print(f"Nome '{antigo}' atualizado para '{novo}' com sucesso!")
+            else:
+                print("Nome não encontrado.")
+
+        elif opcao == "3":
+            nome = input("Digite o nome que deseja excluir: ")
+            if nome in nomes:
+                nomes.remove(nome)
+                print(f"Nome '{nome}' excluído com sucesso!")
+            else:
+                print("Nome não encontrado.")
+
+        elif opcao == "4":
+            if nomes:
+                print("Lista de cadastrados: ")
+                for i, nome in enumerate(nomes, start=1):
+                    print(f"{i}. {nome}")
+            else:
+                print("Nenhum nome cadastrado.")
+
+        elif opcao == "0":
+            print("Encerrando o programa. Até logo!")
+            break
+
+        else:
+            print("Opção inválida. Tente novamente.")
+
+        continuar = input("Deseja realizar outra operação? (s/n): ")
+        if continuar != "s":
+            print("Encerrando o programa!")
+            break
+
+menu()

@@ -1,0 +1,1 @@
+# O código está inteiramente no arquivo exercicios/atividade67.py :)
